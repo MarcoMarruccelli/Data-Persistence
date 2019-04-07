@@ -32,11 +32,18 @@
                             <outlet property="delegate" destination="gcl-wS-276" id="Mos-Vx-Ce7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Topics to accomplish" id="lRO-sP-0gh"/>
+                    <navigationItem key="navigationItem" title="Topics to accomplish" id="lRO-sP-0gh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rGm-VA-LHw">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="gcl-wS-276" id="6vf-YY-gcc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc7-Mh-wzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1834.7826086956522" y="124.55357142857142"/>
+            <point key="canvasLocation" x="1757" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GNK-B4-FAm">
