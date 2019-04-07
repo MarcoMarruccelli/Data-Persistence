@@ -11,10 +11,14 @@ import UIKit
 class ToDoList: UITableViewController {
 
     var topicArray = ["Grocery List", "Academy Tasks" , "Daily Achievements"]
-    
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let dataOfTheUser = defaults.array(forKey: "ToDoListArray") as? [String] {
+            topicArray = dataOfTheUser
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -61,6 +65,7 @@ class ToDoList: UITableViewController {
             
             if userTextField.text != nil {
                 self.topicArray.append(userTextField.text!)
+                self.defaults.set(self.topicArray, forKey: "ToDoListArray")
                 self.tableView.reloadData()
             } else {
                 return
